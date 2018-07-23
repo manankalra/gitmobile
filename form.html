@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.css">
+
+    <title>Hello, world!</title>
+    <style>
+    </style>
+
+</head>
+
+<body style="background-image:url(set.jpg) ; background-size: 100%,100%">
+
+    <script type="text/javascript">
+        function validate() {
+            var x = document.getElementById("user").value;
+            if (x == "") {
+               alert( "** Please fill the Username")
+                return false;
+            }
+        }
+    </script>
+
+    <div class="container bg-white text-dark" style="width:500px">
+        <nav class="navbar navbar-expand-sm navbar-dark ">
+
+            <a href="" class="navbar-brand font-weight-bold " style="font-size: 25px; color: crimson">GIT MOBILE</a>
+
+
+        </nav>
+        <br>
+
+        <br>
+        <center>
+
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-xl-12">
+                    <img src="git.png" alt="git hub" class="rounded-circle img-fluid" width="100px" height="100px">
+                </div>
+            </div>
+        </center>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <form onsubmit="return validate()" action="password.html">
+            <div class="form-group " style="font-size: 20px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+                <label for="user">Username</label>
+                <br>
+
+                <input type="text" style=" width=:40%" placeholder="Type your Username or valid Email id" id="user"
+                    class="form-control" max="50" min="3">
+            </div>
+           
+            <br>
+            <br>
+            <input type="submit" class="btn btn-primary float-right btn-lg" style="width: 100%;" value="Next">
+        </form>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="text-center">
+            New User ? &nbsp&nbsp
+            <a href="signup.html" class="btn btn-primary">Sign up</a>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="text-center" style="font-size: 20px">
+            <strong> Login with- </strong>
+        </div>
+        <br>
+        <div>
+            <center>
+                <a href="openhub.com" class="text-dark" style="a:hover">
+                    <img src="lab.jpg" alt="" class="rounded-circle img-fluid text-white" width="50px" height="50px"> GIT LAB
+                </a> &nbsp&nbsp
+                <a href="openhub.com" class="text-dark">
+                    <img src="hub.png" alt="" class="rounded-circle img-fluid text-white" width="50px" height="50px"> OPEN HUB
+                </a>
+            </center>
+        </div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

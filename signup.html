@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.css">
+
+    <title>Hello, world!</title>
+    <style>
+    </style>
+</head>
+
+<body style="background-image:url(set.jpg) ; background-size: 100%,100%">
+
+
+    <script type="text/javascript">
+        function validate() {
+            var cor = /^[A-Za-z]+$/;
+            var x = document.getElementById("username").value;
+            var p1 = document.getElementById("pass_1").value;
+            var p2 = document.getElementById("pass_2").value;
+            var con = document.getElementById("contact").value;
+            var em = document.getElementById("email1").value;
+
+            if (x == "") {
+                
+                alert("please enter user name")
+                return false;
+            } if (x.length < 3) {
+                 alert("**Username must not be less than 3 chracter ")
+                return false;
+            }
+            if (x.length > 15) {
+               alert( "**Userna must not be more than 15 character")
+                return false;
+            }
+            if (x.match(cor))
+                true;
+            else {
+                alert("**Username must not contain special character or number")
+                return false;
+            }
+
+             if (em == "") {
+               alert( "**Please enter mail")
+                return false;
+            }
+
+            if (em.indexOf('@') <= 0) {
+                alert("**Please check the position of @")
+                return false;
+            }
+            if ((em.charAt(em.length - 4) != '.') && (em.charAt(em.length - 3) != '.')) {
+               alert( "**Please check the position of . (dot)")
+                return false;
+            }
+            if (p1 == "") {
+                alert("**please enter passwordr")
+                return false;
+            }
+
+            if (p1.length > 15) {
+               alert( "**Password must not be more than 15 character")
+                return false;
+            }
+            if (p1.length < 5) {
+                alert("**Password must not be less than 6 character")
+                return false;
+            }
+
+            if (p1 != p2) {
+                alert( "**password does not match")
+                return false;
+            }
+
+            if (con == "") {
+                alert("**Please enter 10 digit Mobile Number")
+                return false;
+            }
+
+
+            if (con.length != 10) {
+               alert("**Please enter valid 10 digit Mobile Number")
+                return false;
+            }
+
+           
+
+
+        }
+
+    </script>
+
+
+
+
+
+
+
+    <div class="container bg-white text-dark" style="width: 500px">
+        <nav class="navbar navbar-expand-sm navbar-dark ">
+
+            <a href="" class="navbar-brand font-weight-bold " style="font-size: 25px; color: crimson">GIT MOBILE</a>
+
+
+        </nav>
+        <br>
+
+        <br>
+        <center>
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-xl-12">
+                    <img src="git.png" alt="git hub" class="rounded-circle img-fluid" width="100px" height="100px">
+                </div>
+            </div>
+        </center>
+        <br>
+        <br>
+
+
+        <form onsubmit="return validate()" action="form.html">
+
+            <div class="form-group" style="font-size:20px; font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">
+
+                <center>Please fill the below information</center>
+                <br>
+                <br>
+                <br>
+                <br>
+                <label for="username">Username:</label>
+
+                <input type="text" placeholder="Enter your correct yousername" id="username" class="form-control">
+            <br><br>
+
+                <!-- <p id="p1" class="text-dark float left"></p> -->
+                 
+
+
+                <label for="email1">Email Id:</label>
+
+                <input type="email" placeholder="Enter your correct Email Id" id="email1" class="form-control">
+                <br>
+                <br>
+               
+
+                <label for="pass_1">Create your Password:</label>
+
+                <input type="password" placeholder="Enter your  Password" id="pass_1" class="form-control">
+                <br>
+                <br>
+                <label for="pass_2">Confirm Password::</label>
+
+                <input type="password" placeholder="Confirm Password" id="pass_2" class="form-control">
+                <br>
+                <br>
+                  <label for="contact">Contact Details:</label>
+
+                <input type="number" placeholder="10 Digit Mobile Number" id="contact" class="form-control">
+                <br>
+                <br>
+                <br>
+                <br>
+                <input type="submit" value="Continue" class="btn btn-primary float-right" style="width: 100%;">
+
+
+            </div>
+            
+
+
+
+        </form>
+        <br>
+        <br>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
