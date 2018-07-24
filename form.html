@@ -17,17 +17,39 @@
 
 <body style="background-image:url(set.jpg) ; background-size: 100%,100%">
 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
     <script type="text/javascript">
-        function validate() {
-            var x = document.getElementById("user").value;
-            if (x == "") {
-               alert( "** Please fill the Username")
-                return false;
+ 
+            function validate(){
+      //$(document).ready(function(){
+          var n1="Harshit";
+            var n2 = $("#user").val();
+                              
+                        if (n2=="") {
+                             alert("Please enter username");
+                             return false;
+                            
+                             }
+                             else if(n1!=n2)
+                             {
+                                 alert("user does not exist")
+                                 return false;
+                             }
+                //           })
+
+                             
+
+                    
+             
             }
-        }
+
+
+
     </script>
 
-    <div class="container bg-white text-dark" style="width:500px">
+    <div class="container bg-white text-dark" style="width:400px">
         <nav class="navbar navbar-expand-sm navbar-dark ">
 
             <a href="" class="navbar-brand font-weight-bold " style="font-size: 25px; color: crimson">GIT MOBILE</a>
@@ -55,13 +77,16 @@
                 <label for="user">Username</label>
                 <br>
 
-                <input type="text" style=" width=:40%" placeholder="Type your Username or valid Email id" id="user"
-                    class="form-control" max="50" min="3">
+                <input type="text" style=" width=:40%" placeholder="Type your Username or valid Email id" id="user" class="form-control"
+                    max="50" min="3">
             </div>
-           
+
             <br>
             <br>
-            <input type="submit" class="btn btn-primary float-right btn-lg" style="width: 100%;" value="Next">
+            <!-- <input type="submit" class="btn btn-primary float-right btn-lg" style="width: 100%;" value="Next">
+            -->
+            <button type="submit" class="btn btn-primary float-right btn-lg" style="width:100%" id="b1">Next
+            </button>
         </form>
         <br>
         <br>

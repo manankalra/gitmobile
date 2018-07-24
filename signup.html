@@ -16,15 +16,78 @@
 
 <body style="background-image:url(set.jpg) ; background-size: 100%,100%">
 
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <script type="text/javascript">
+
+
+$(document).ready(function(){
+
+$("#pass_1").keyup(function(){
+
+
+var len=$("#pass_1").val().length;
+
+
+if(len<1)
+{
+$(".p").text("");
+
+}
+
+else if(len<=4){
+$(".p").text("WEAK");
+$
+}
+
+else if(len<=8){
+$(".p").text("GOOD");
+}
+
+else
+{
+
+$(".p").text("STRONG");
+}
+
+
+
+
+
+})
+
+
+
+
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         function validate() {
             var cor = /^[A-Za-z]+$/;
-            var x = document.getElementById("username").value;
-            var p1 = document.getElementById("pass_1").value;
-            var p2 = document.getElementById("pass_2").value;
-            var con = document.getElementById("contact").value;
-            var em = document.getElementById("email1").value;
+            var x = $("#username").val();
+            var p1 = $("#pass_1").val();
+            var p2 = $("#pass_2").val();
+            var con = $("#contact").val();
+            var em = $("#email1").val();
 
             if (x == "") {
                 
@@ -58,6 +121,26 @@
                alert( "**Please check the position of . (dot)")
                 return false;
             }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             if (p1 == "") {
                 alert("**please enter passwordr")
                 return false;
@@ -76,6 +159,7 @@
                 alert( "**password does not match")
                 return false;
             }
+
 
             if (con == "") {
                 alert("**Please enter 10 digit Mobile Number")
@@ -101,7 +185,7 @@
 
 
 
-    <div class="container bg-white text-dark" style="width: 500px">
+    <div class="container bg-white text-dark" style="width: 400px">
         <nav class="navbar navbar-expand-sm navbar-dark ">
 
             <a href="" class="navbar-brand font-weight-bold " style="font-size: 25px; color: crimson">GIT MOBILE</a>
@@ -150,6 +234,7 @@
                 <label for="pass_1">Create your Password:</label>
 
                 <input type="password" placeholder="Enter your  Password" id="pass_1" class="form-control">
+                <span class="p" style="font-size: 15px;"></span>
                 <br>
                 <br>
                 <label for="pass_2">Confirm Password::</label>
