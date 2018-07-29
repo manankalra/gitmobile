@@ -22,13 +22,12 @@
 
     <!--<link rel="stylesheet" href="css/custom-theme/jquery-ui-1.10.0.custom.css">-->
 
-    <link rel="stylesheet" href="css/signin.css">
-
-    <script src="js/signup.js"></script>
+    <link rel="stylesheet" href="css/signin_pass.css">
+    <script src="js/signin_pass.js"></script>
 </head>
 <body style="background-color: lightgray;">
 
-<nav class="navbar" style="color: white; background-color: darkgray;">
+<nav class="navbar" style="color: white; background-color: darkgray">
     GitMobile
 </nav>
 
@@ -40,37 +39,32 @@
             <center><b>GitHub in your pocket!</b></center>
         </div>
         <div class="card-body">
-            <form onsubmit="return validate_form()" action="main.html">
-                <div class="form-group">
-                    <label for="userinput">Username:</label>
-                    <input type="text" class="form-control" id="userinput" placeholder="Choose a username">
-                </div>
-                <div class="form-group">
-                    <label for="email">E-mail:</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter your E-mail"
-                           title="We won't share sensitive information with third-parties without your permission!">
-                </div>
-                <div class="form-group">
-                    <label for="bdate">Birthdate:</label>
-                    <input class="form-control" id="bdate" placeholder="Select your birth date">
-                </div>
+            <form onsubmit="return validate_password()" action="feed.html">
                 <div class="form-group">
                     <label for="passinput">Password:</label>
-                    <input type="password" class="form-control" id="passinput" placeholder="Choose a password">
-                    <span id="strength"></span>
+                    <input type="password" class="form-control" id="passinput" placeholder="Enter password">
                 </div>
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                    </label>
+                </div>
+                <br>
                 <center>
                     <button type="submit" id="proceed">
                         <i class="fa fa-arrow-circle-right fa-3x" aria-hidden="true"></i>
                     </button>
                 </center>
-                <br>
-            </form>
-
+                <br></form>
+        </div>
+        <div class="card-footer">
+            <center><span>Forgot password?</span>&nbsp;&nbsp;<a href="signup.html">
+                <button class="btn btn-secondary">Recover</button>
+            </a></center>
         </div>
     </div>
 </div>
-<script src="js/signup.js"></script>
+<script src="js/signin.js"></script>
 </div>
 
 </body>

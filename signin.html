@@ -24,7 +24,7 @@
 
     <link rel="stylesheet" href="css/signin.css">
 
-    <script src="js/signup.js"></script>
+    <script src="js/signin.js"></script>
 </head>
 <body style="background-color: lightgray;">
 
@@ -40,37 +40,55 @@
             <center><b>GitHub in your pocket!</b></center>
         </div>
         <div class="card-body">
-            <form onsubmit="return validate_form()" action="main.html">
+            <form onsubmit="return validate_username()" action="signin_pass.html">
                 <div class="form-group">
                     <label for="userinput">Username:</label>
-                    <input type="text" class="form-control" id="userinput" placeholder="Choose a username">
+                    <input type="text" class="form-control" id="userinput" placeholder="Enter username">
                 </div>
-                <div class="form-group">
-                    <label for="email">E-mail:</label>
-                    <input type="email" class="form-control" id="email" placeholder="Enter your E-mail"
-                           title="We won't share sensitive information with third-parties without your permission!">
+                <!-- Remember username
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox" name="remember"> Remember username
+                    </label>
                 </div>
-                <div class="form-group">
-                    <label for="bdate">Birthdate:</label>
-                    <input class="form-control" id="bdate" placeholder="Select your birth date">
-                </div>
-                <div class="form-group">
-                    <label for="passinput">Password:</label>
-                    <input type="password" class="form-control" id="passinput" placeholder="Choose a password">
-                    <span id="strength"></span>
-                </div>
+                -->
+                <br>
                 <center>
                     <button type="submit" id="proceed">
                         <i class="fa fa-arrow-circle-right fa-3x" aria-hidden="true"></i>
                     </button>
                 </center>
-                <br>
-            </form>
-
+                <br></form>
+            <center><span>or<br>Login with:<br></span></center>
+            <div id="images">
+                <div id="images1" style="float: left;" class="card">
+                    <div class="card-header">
+                        <center><a href="http://gitlab.com/"><img class="logo" src="img/logo_gitlab.png"></a>
+                        </center>
+                    </div>
+                    <div class="card-footer">
+                        <center>GitLab</center>
+                    </div>
+                </div>
+                <div id="images2" style="float: right;" class="card">
+                    <div class="card-header">
+                        <center><a href="https://openhub.net/"><img class="logo" src="img/logo_openhub.png"></a>
+                        </center>
+                    </div>
+                    <div class="card-footer">
+                        <center>OpenHub</center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">
+            <center><span>Don't have an account?</span>&nbsp;&nbsp;<a href="signup.html">
+                <button class="btn btn-primary">Sign Up</button>
+            </a></center>
         </div>
     </div>
 </div>
-<script src="js/signup.js"></script>
+<script src="js/signin.js"></script>
 </div>
 
 </body>

@@ -1,79 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>feed</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>feed</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <!-- Popper JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-  <!--font-awesome-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <!--font-awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <link rel="stylesheet" href="css/feed.css">
-  <script type="text/javascript">
-    $(document).ready(function(){
-        $.getJSON("feed.json", function(data){
-          $.each(data, function(i, obj){
-            $("#notif").append("<p style='margin: 10px;'><b>" + obj.uname + "</b> starred <b>" + obj.starred + "</b><hr></p>");
-          });
+    <link rel="stylesheet" href="css/feed.css">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.getJSON("feed.json", function (data) {
+                $.each(data, function (i, obj) {
+                    $("#notif").append("<p style='margin: 10px;'><b>" + obj.uname + "</b> starred <b>" + obj.starred + "</b><hr></p>");
+                });
+            });
         });
-    });
-  </script>
+    </script>
 </head>
 
 <body>
 
 <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <i class="fa fa-bars" style="font-size: 24px; margin: 10px; float: left;" onclick="openNav()">&nbsp;GitMobile</i>
-    <i class="fa fa-search" style="font-size: 30px; margin: 10px; float: right"></i>
-    <a href="notifications.html"><i class="fa fa-bell" style="font-size: 30px; margin: 10px; float: right"></i></a>
-  </div>
+    <div class="container-fluid">
+        <i class="fa fa-bars" style="font-size: 24px; margin: 10px; float: left;"
+           onclick="openNav()">&nbsp;GitMobile</i>
+        <i class="fa fa-search" style="font-size: 30px; margin: 10px; float: right"></i>
+        <a href="notifications.html"><i class="fa fa-bell" style="font-size: 30px; margin: 10px; float: right"></i></a>
+    </div>
 </nav>
 
 <div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <p style="font-size: 20px; color: white; margin: 10px;">harshit2195</p>
-  <a href="#" onclick="closeNav()">Home</a><hr>
-  <a href="#">Dummy</a>
-  <a href="#">Dummy</a>
-  <a href="#">Dummy</a><hr>
-  <a href="#">Dummy</a>
-  <a href="#">Dummy</a>
-  <a href="#">Dummy</a>
-  <a href="#">Dummy</a><hr>
-  <a href="#">Report an Issue</a>
-  <a href="#">FAQ</a>
-  <a href="#">Settings</a>
-  <a href="#">About Us</a>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <p style="font-size: 20px; color: white; margin: 10px;">harshit2195</p>
+    <a href="#" onclick="closeNav()">Home</a>
+    <hr>
+    <a href="#">Dummy</a>
+    <a href="#">Dummy</a>
+    <a href="#">Dummy</a>
+    <hr>
+    <a href="#">Dummy</a>
+    <a href="#">Dummy</a>
+    <a href="#">Dummy</a>
+    <a href="#">Dummy</a>
+    <hr>
+    <a href="#">Report an Issue</a>
+    <a href="#">FAQ</a>
+    <a href="#">Settings</a>
+    <a href="#">About Us</a>
 </div>
 <div id="notif">
 </div>
 <script>
-	function openNav() {
-    	document.getElementById("mySidenav").style.width = "250px";
-    	document.getElementById("main").style.marginLeft = "250px";
-    	document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-	}
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+    }
 
-	function closeNav() {
-	    document.getElementById("mySidenav").style.width = "0";
-    	document.getElementById("main").style.marginLeft= "0";
-    	document.body.style.backgroundColor = "white";
-	}
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+    }
 </script>
 
-<div class="navbar" id="bottom" style="background-color: #333; overflow: hidden; position: fixed; bottom: 0; width: 100%;">
-  <i class="fa fa-exclamation-circle" style="font-size: 30px; margin: 10px;"></i>
-  <i class="fa fa-globe" style="font-size: 30px; margin: 10px;"></i>
-  <i class="fa fa-cloud-upload" style="font-size: 30px; margin: 10px; width: 33%;"></i>
+<div class="navbar" id="bottom"
+     style="background-color: #333; overflow: hidden; position: fixed; bottom: 0; width: 100%;">
+    <i class="fa fa-exclamation-circle" style="font-size: 30px; margin: 10px;"></i>
+    <i class="fa fa-globe" style="font-size: 30px; margin: 10px;"></i>
+    <i class="fa fa-cloud-upload" style="font-size: 30px; margin: 10px; width: 33%;"></i>
 </div>
 </body>
 </html>
