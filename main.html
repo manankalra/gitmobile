@@ -29,34 +29,29 @@
 </head>
 
 <body>
-
-<nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <i class="fa fa-bars" style="font-size: 24px; margin: 10px; float: left;"
-           onclick="openNav()">&nbsp;GitMobile</i>
-        <i class="fa fa-search" style="font-size: 30px; margin: 10px; float: right"></i>
-        <a href="notifications.html"><i class="fa fa-bell" style="font-size: 30px; margin: 10px; float: right"></i></a>
-    </div>
+<nav class="navbar" style="background-color: darkgray; position: fixed; width: 100%;">
+    <i class="fa fa-bars fa-2x icon" style=" margin: 10px; float: left;" onclick="openNav()">&nbsp;&nbsp;GitMobile</i>
+    <a href="notifications.html icon"><i class="fa fa-bell fa-2x"></i></a>
+    <i class="fa fa-search fa-2x icon" style="float: right"></i>
 </nav>
-
 <div id="mySidenav" class="sidenav">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <p style="font-size: 20px; color: white; margin: 10px;">harshit2195</p>
-    <a href="#" onclick="closeNav()">Home</a>
+    <img src="img/profile.png" style="width: 50px; height: 50px; margin: 10px 10px 10px 15px; border-radius: 50%;">
+    <span style="font-size: 25px; color: white; margin: 10px;">manankalra</span><br>
+    <i class="fa fa-home fa-2x icon" aria-hidden="true"></i><a href="#" onclick="closeNav()" style="width: 90%; float: right;">Home</a>
     <hr>
-    <a href="#">Dummy</a>
-    <a href="#">Dummy</a>
-    <a href="#">Dummy</a>
+    <i class="fa fa-user-circle fa-2x icon" aria-hidden="true"></i><a href="#"">Profile</a>
+    <i class="fa fa-users fa-2x icon" aria-hidden="true"></i><a href="#">Organizations</a>
+    <i class="fa fa-bell fa-2x icon" aria-hidden="true"></i><a href="#">Notifications</a>
     <hr>
-    <a href="#">Dummy</a>
-    <a href="#">Dummy</a>
-    <a href="#">Dummy</a>
-    <a href="#">Dummy</a>
+    <i class="fa fa-bookmark fa-2x icon" aria-hidden="true"></i><a href="#">Pinned </a>
+    <i class="fa fa-line-chart fa-2x icon" aria-hidden="true"></i><a href="#">Trending</a>
+    <i class="fa fa-cog fa-2x icon" aria-hidden="true"></i><a href="#">Gists</a>
     <hr>
-    <a href="#">Report an Issue</a>
-    <a href="#">FAQ</a>
-    <a href="#">Settings</a>
-    <a href="#">About Us</a>
+    <i class="fa fa-bug fa-2x icon" aria-hidden="true"></i><a href="#">Report an Issue</a>
+    <i class="fa fa-exclamation-circle fa-2x icon" aria-hidden="true"></i><a href="#">FAQ</a>
+    <i class="fa fa-align-left fa-2x icon" aria-hidden="true"></i><a href="#">Settings</a>
+    <i class="fa fa-address-card fa-2x icon" aria-hidden="true"></i><a href="#">About Us</a>
 </div>
 <div id="notif">
 </div>
@@ -74,11 +69,10 @@
     }
 </script>
 
-<div class="navbar" id="bottom"
-     style="background-color: #333; overflow: hidden; position: fixed; bottom: 0; width: 100%;">
-    <i class="fa fa-exclamation-circle" style="font-size: 30px; margin: 10px;"></i>
-    <i class="fa fa-globe" style="font-size: 30px; margin: 10px;"></i>
-    <i class="fa fa-cloud-upload" style="font-size: 30px; margin: 10px; width: 33%;"></i>
+<div class="navbar" style="background-color: darkgray; position: fixed; bottom: 0; width: 100%;">
+    <i class="fa fa-bug fa-2x icon" style="width: 33%;"></i>
+    <i class="fa fa-globe fa-2x icon" style="width: 33%;"></i>
+    <i class="fa fa-code-fork fa-2x icon" style="width: 33%;"></i>
 </div>
 </body>
 </html>
